@@ -2,9 +2,9 @@
 This is an AI chatbot built with the Gemini API, leveraging Vanilla JavaScript, HTML, and CSS for a seamless, interactive user experience.
 
 ## Features:
-AI-Powered: Utilizes Gemini API for advanced conversational abilities.<br>
-Simple and Efficient: Built with pure JavaScript, no frameworks required.<br>
-Customizable Interface: Styled with CSS for easy personalization.<br>
+AI-Powered: Utilizes Gemini API for advanced conversational abilities.
+Simple and Efficient: Built with pure JavaScript, no frameworks required.
+Customizable Interface: Styled with CSS for easy personalization.
 Responsive Design: Optimized for desktop and mobile devices.
 
 ## How It Works:
