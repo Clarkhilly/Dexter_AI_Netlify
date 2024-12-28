@@ -1,5 +1,5 @@
 # AI-Chatbot using Gemini API
-This is aн AI chatbot built with the Gemini API, leveraging Vanilla JavaScript, HTML, and CSS for a seamless, interactive user experience.
+This is an AI chatbot built with the Gemini API, leveraging Vanilla JavaScript, HTML, and CSS for a seamless, interactive user experience.
 
 ## Features:
 AI-Powered: Utilizes Gemini API for advanced conversational abilities.<br>
