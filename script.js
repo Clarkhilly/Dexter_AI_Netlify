@@ -1,4 +1,4 @@
-import { API_KEY } from "./apikey";
+import { API_KEY } from "./apikey.js";
 
 const msgInput = document.querySelector(".msg-input");
 const chatBody = document.querySelector(".bodyy");
