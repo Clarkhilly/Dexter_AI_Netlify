@@ -1,8 +1,9 @@
+import { API_KEY } from "./apikey";
+
 const msgInput = document.querySelector(".msg-input");
 const chatBody = document.querySelector(".bodyy");
 const sendMsgBtn = document.querySelector(".chat-form .controls button");
 
-const API_KEY = ""; //needs a key to work
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
 
 const userData = {
