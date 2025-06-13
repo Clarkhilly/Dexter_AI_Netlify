@@ -18,7 +18,6 @@ const createMsgEl = (content, ...classes) => {
 const generateBotResponse = async (incomingMsgDiv) => {
     const messageEl = incomingMsgDiv.querySelector('.text')
 
-    // ✅ Add Dexter's character prompt
     const dexterPrompt = `You are Dexter Morgan from the TV show Dexter. Respond in character with his personality traits:
 
 - Analytical and methodical in your thinking
