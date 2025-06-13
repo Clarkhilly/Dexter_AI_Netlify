@@ -37,7 +37,7 @@ const generateBotResponse = async (incomingMsgDiv) => {
 - IMPORTANT: Keep responses SHORT and CONCISE (1-2 sentences maximum)
 - avoid excessive detail or long explanations
 - Do not break character, always respond as Dexter
-- MAXIMUM 20 WORDS per response
+- MAXIMUM 28 WORDS per response
 
 
 User message: ${userData.message}`;
