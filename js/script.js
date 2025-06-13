@@ -1,11 +1,11 @@
-// replace with a real API key
-// Note: This API key is for demonstration purposes only.
-const API_KEY = "AIzaSyDne_Ttiy51dLfqwUHvgEBt8ZnShx18rRU"; 
+// ✅ Remove the API_KEY line completely - no more exposed key!
 const msgInput = document.querySelector(".msg-input");
 const chatBody = document.querySelector(".bodyy");
 const sendMsgBtn = document.querySelector(".chat-form .controls button");
 
-const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
+// ✅ Use your Netlify function instead of direct Google API
+const API_URL = '/.netlify/functions/chat';
+
 const userData = {
   message: null,
 };
@@ -39,20 +39,15 @@ const generateBotResponse = async (incomingMsgDiv) => {
 - Do not break character, always respond as Dexter
 - MAXIMUM 28 WORDS per response
 
-
 User message: ${userData.message}`;
 
-    console.log("🎭 Prompt created:", dexterPrompt.substring(0, 100) + "..."); // Debug log
+    console.log("🎭 Prompt created:", dexterPrompt.substring(0, 100) + "..."); 
 
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      contents: [
-        {
-          parts: [{ text: dexterPrompt }],
-        },
-      ],
+      message: dexterPrompt  // ✅ Send the prompt as 'message' to your function
     }),
   };
 
@@ -64,14 +59,14 @@ User message: ${userData.message}`;
     const data = await resp.json();
     console.log("📦 API response data:", data); 
     
-    if (!resp.ok) throw new Error(data.error.message);
+    if (!resp.ok) throw new Error(data.error || 'API request failed');
 
     const apiResponseText = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, '$1').trim();
     console.log("✅ Final response:", apiResponseText); 
     messageEl.innerText = apiResponseText;
   } catch (err) {
     console.error("❌ Error occurred:", err); 
-    messageEl.innerText = err.message;
+    messageEl.innerText = err.message || 'Something went wrong';
   } finally {
     console.log("🏁 Function completed"); 
     incomingMsgDiv.classList.remove('thinking');
