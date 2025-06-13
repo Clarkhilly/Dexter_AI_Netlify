@@ -49,6 +49,9 @@ const handleMsg = (e) => {
   e.preventDefault();
 
   userData.message = msgInput.value.trim();
+  if (!userData.message) {
+    return;
+  }
   msgInput.value = "";
 
   const content = `<div class="text"></div>`;
