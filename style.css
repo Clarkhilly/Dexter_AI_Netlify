@@ -12,21 +12,21 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: rgba(79, 10, 79, 0.98);
+  background: #0d0d0d;
 }
 
 .chatbot {
   position: relative;
   height: 700px;
   width: 750px;
-  background-color: white;
+  background-color: #1a1a1a;
   overflow: hidden;
   border-radius: 15px;
-  box-shadow: 0px 0px 10px 0 black
+  box-shadow: 0px 0px 20px 0 rgba(139, 0, 0, 0.3);
 }
 
 .header {
-  background-color: rgba(79, 10, 79, 0.98);
+  background-color: #8b0000;
   height: 70px;
   display: flex;
   align-items: center;
@@ -41,12 +41,12 @@ body {
 .header-info h2 {
   padding-left: 20px;
   font-size: 22px;
-  color: goldenrod;
+  color: #2d5016;
 }
 
 .header-info img {
   padding: 3px;
-  background-color: goldenrod;
+  background-color: #2d5016;
   height: 45px;
   margin-left: 20px;
   border-radius: 50%;
@@ -71,7 +71,7 @@ body {
 #chatbot-icon {
   height: 35px;
   padding: 3px;
-  background-color: goldenrod;
+  background-color: #2d5016;
   margin-left: 20px;
   border-radius: 50%;
   flex-shrink: 0;
@@ -87,7 +87,7 @@ body {
 }
 
 .message .text {
-  color: goldenrod;
+  color: #2d5016;
   padding: 12px 16px;
   font-size: 0.95rem;
 }
@@ -97,14 +97,14 @@ body {
 }
 
 .bot-msg .text {
-  background-color: rgba(79, 10, 79, 0.98);
+  background-color: #8b0000;
   border-radius: 13px 13px 13px 3px;
   margin-right: 240px;
 }
 
 .user-msg .text {
-  background-color: rgba(79, 10, 79, 0.98);
-  color: white;
+  background-color: #2d2d2d;
+  color: #cccccc;
   border-radius: 13px 13px 3px 13px;
   margin-left: 180px;
 }
@@ -120,7 +120,7 @@ body {
   width: 7px;
   opacity: 0.7;
   border-radius: 50%;
-  background-color: goldenrod;
+  background-color: #2d5016;
   animation: dotPulse 1.8s ease-in-out infinite;
 }
 
@@ -154,20 +154,20 @@ body {
   position: absolute;
   width: 100%;
   bottom: 0;
-  background-color: white;
+  background-color: #1a1a1a;
   padding: 15px 22px 20px;
 }
 
 .chat-form {
   display: flex;
   align-items: center;
-  background-color: white;
+  background-color: #2d2d2d;
   border-radius: 32px;
-  outline: 1px solid rgba(79, 10, 79, 0.98);
+  outline: 1px solid #8b0000;
 }
 
 .chat-form:focus-within {
-  outline: 2px solid rgba(79, 10, 79, 0.98);
+  outline: 2px solid #8b0000;
 }
 
 .msg-input {
@@ -179,6 +179,8 @@ body {
   font-size: 0.95rem;
   padding: 14px 0 13px 18px;
   border-radius: inherit;
+  background-color: #2d2d2d;
+  color: #cccccc;
 }
 
 .chat-form .controls {
@@ -194,7 +196,7 @@ body {
   cursor: pointer;
   border-radius: 32px;
   border-width: 0.8px;
-  background-color: rgba(79, 10, 79, 0.98);
+  background-color: #8b0000;
   color: white;
   display: none;
 }

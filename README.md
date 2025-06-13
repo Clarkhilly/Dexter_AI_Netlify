@@ -1,5 +1,5 @@
 # AI-Chatbot using Gemini API
-This is an opportunity to chat with Lebron James, built with the Gemini API, leveraging Vanilla JavaScript, HTML, and CSS for a seamless, interactive user experience.
+This is an opportunity to chat with Dexter Morgan, built with the Gemini API, leveraging Vanilla JavaScript, HTML, and CSS for a seamless, interactive user experience.
 
 ## Features:
 AI-Powered: Utilizes Gemini API for advanced conversational abilities.
@@ -12,5 +12,3 @@ The chatbot sends user input to the Gemini API and displays AI-generated respons
 The project demonstrates clean, modular code and a focus on simplicity for developers and users alike.<hr>
 
 ### The project cannot be used without API key
-### here is a brief example of how it works:<br>
-<img width="1470" alt="Screenshot 2025-01-04 at 16 20 54" src="https://github.com/user-attachments/assets/e316035b-a656-4896-ae10-e87303a35ec4" />
