@@ -1,3 +1,5 @@
+// replace with a real API key
+// Note: This API key is for demonstration purposes only.
 const API_KEY = "AIzaSyDne_Ttiy51dLfqwUHvgEBt8ZnShx18rRU"; 
 const msgInput = document.querySelector(".msg-input");
 const chatBody = document.querySelector(".bodyy");
@@ -18,8 +20,8 @@ const createMsgEl = (content, ...classes) => {
 const generateBotResponse = async (incomingMsgDiv) => {
     const messageEl = incomingMsgDiv.querySelector('.text')
 
-    console.log("🚀 generateBotResponse started"); // Debug log
-    console.log("📝 User message:", userData.message); // Debug log
+    console.log("🚀 generateBotResponse started"); 
+    console.log("📝 User message:", userData.message); 
 
     const dexterPrompt = `You are Dexter Morgan from the TV show Dexter. Respond in character with his personality traits:
 
@@ -32,6 +34,8 @@ const generateBotResponse = async (incomingMsgDiv) => {
 - Speak in a calm, controlled manner
 - Sometimes reference forensics, blood spatter analysis, or psychology
 - Keep responses helpful but with Dexter's distinctive voice
+- IMPORTANT: Keep responses SHORT and CONCISE (1-4 sentences maximum)
+- Be direct and to the point, like Dexter's efficient communication style
 
 User message: ${userData.message}`;
 
@@ -50,23 +54,23 @@ User message: ${userData.message}`;
   };
 
   try {
-    console.log("🌐 Making API request..."); // Debug log
+    console.log("🌐 Making API request..."); 
     const resp = await fetch(API_URL, requestOptions);
-    console.log("📡 API response status:", resp.status); // Debug log
+    console.log("📡 API response status:", resp.status); 
     
     const data = await resp.json();
-    console.log("📦 API response data:", data); // Debug log
+    console.log("📦 API response data:", data); 
     
     if (!resp.ok) throw new Error(data.error.message);
 
     const apiResponseText = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, '$1').trim();
-    console.log("✅ Final response:", apiResponseText); // Debug log
+    console.log("✅ Final response:", apiResponseText); 
     messageEl.innerText = apiResponseText;
   } catch (err) {
-    console.error("❌ Error occurred:", err); // Debug log
+    console.error("❌ Error occurred:", err); 
     messageEl.innerText = err.message;
   } finally {
-    console.log("🏁 Function completed"); // Debug log
+    console.log("🏁 Function completed"); 
     incomingMsgDiv.classList.remove('thinking');
     chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: 'smooth'});
   }
