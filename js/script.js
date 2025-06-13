@@ -18,6 +18,9 @@ const createMsgEl = (content, ...classes) => {
 const generateBotResponse = async (incomingMsgDiv) => {
     const messageEl = incomingMsgDiv.querySelector('.text')
 
+    console.log("🚀 generateBotResponse started"); // Debug log
+    console.log("📝 User message:", userData.message); // Debug log
+
     const dexterPrompt = `You are Dexter Morgan from the TV show Dexter. Respond in character with his personality traits:
 
 - Analytical and methodical in your thinking
@@ -32,6 +35,8 @@ const generateBotResponse = async (incomingMsgDiv) => {
 
 User message: ${userData.message}`;
 
+    console.log("🎭 Prompt created:", dexterPrompt.substring(0, 100) + "..."); // Debug log
+
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -45,15 +50,23 @@ User message: ${userData.message}`;
   };
 
   try {
+    console.log("🌐 Making API request..."); // Debug log
     const resp = await fetch(API_URL, requestOptions);
+    console.log("📡 API response status:", resp.status); // Debug log
+    
     const data = await resp.json();
+    console.log("📦 API response data:", data); // Debug log
+    
     if (!resp.ok) throw new Error(data.error.message);
 
     const apiResponseText = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, '$1').trim();
+    console.log("✅ Final response:", apiResponseText); // Debug log
     messageEl.innerText = apiResponseText;
   } catch (err) {
+    console.error("❌ Error occurred:", err); // Debug log
     messageEl.innerText = err.message;
   } finally {
+    console.log("🏁 Function completed"); // Debug log
     incomingMsgDiv.classList.remove('thinking');
     chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: 'smooth'});
   }
