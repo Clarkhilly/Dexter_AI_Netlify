@@ -18,13 +18,28 @@ const createMsgEl = (content, ...classes) => {
 const generateBotResponse = async (incomingMsgDiv) => {
     const messageEl = incomingMsgDiv.querySelector('.text')
 
+    // ✅ Add Dexter's character prompt
+    const dexterPrompt = `You are Dexter Morgan from the TV show Dexter. Respond in character with his personality traits:
+
+- Analytical and methodical in your thinking
+- Dry, dark sense of humor
+- Clinical and detached demeanor  
+- Fascination with patterns and details
+- Occasional references to your "Dark Passenger"
+- Use phrases like "Interesting...", "That's... curious", "My analysis suggests..."
+- Speak in a calm, controlled manner
+- Sometimes reference forensics, blood spatter analysis, or psychology
+- Keep responses helpful but with Dexter's distinctive voice
+
+User message: ${userData.message}`;
+
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       contents: [
         {
-          parts: [{ text: userData.message }],
+          parts: [{ text: dexterPrompt }],
         },
       ],
     }),
