@@ -1,3 +1,7 @@
+try out here: 
+https://dexterchat.netlify.app/
+
+
 # AI-Chatbot using Gemini API
 This is an opportunity to chat with Dexter Morgan, built with the Gemini API, leveraging Vanilla JavaScript, HTML, and CSS for a seamless, interactive user experience.
 
