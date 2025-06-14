@@ -14,6 +14,7 @@ Responsive Design: Optimized for desktop and mobile devices.
 ## How It Works:
 The chatbot sends user input to the Gemini API and displays AI-generated responses in a conversational format.<br>
 The project demonstrates clean, modular code and a focus on simplicity for developers and users alike.<hr>
+![Alt text for the image]("C:\Users\clark\AI-Dexter\images\Screenshot 2025-06-13 171954.png" "Site")
 
 ### The project cannot be used without API key
 
