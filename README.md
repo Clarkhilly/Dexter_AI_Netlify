@@ -16,3 +16,6 @@ The chatbot sends user input to the Gemini API and displays AI-generated respons
 The project demonstrates clean, modular code and a focus on simplicity for developers and users alike.<hr>
 
 ### The project cannot be used without API key
+
+### Inspiration
+https://github.com/nikolay508/AI-Chatbot
