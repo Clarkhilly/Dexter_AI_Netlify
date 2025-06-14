@@ -1,9 +1,7 @@
-// ✅ Remove the API_KEY line completely - no more exposed key!
 const msgInput = document.querySelector(".msg-input");
 const chatBody = document.querySelector(".bodyy");
 const sendMsgBtn = document.querySelector(".chat-form .controls button");
 
-// ✅ Use your Netlify function instead of direct Google API
 const API_URL = '/.netlify/functions/chat';
 
 const userData = {
